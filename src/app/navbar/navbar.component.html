@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark ">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink='home'>
+            <img src="assets/images/logo.png" width="150" height="100" alt="" class="img-fluid">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-2" routerLinkActive='active' routerLink='home'>Trending</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-2" routerLinkActive='active' routerLink='movies'>Movies</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-2" routerLinkActive='active' routerLink='tv'>TV</a>
+                </li>
+                <!-- <li class="nav-item ml-2">
+                    <a class="nav-link" routerLinkActive='active' routerLink='about'>About</a>
+                </li> -->
+                <li class="nav-item mx-2">
+                    <a class="nav-link px-2" routerLinkActive='active' routerLink='contacts'>Contacts</a>
+                </li>
+
+
+                <li class="nav-item dropdown ml-2">
+                    <a class="nav-link dropdown-toggle" routerLinkActive='active' routerLink='reviews' id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reviews</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" routerLink="reviews">Send Feedback</a>
+                        <!-- <a class="dropdown-item" routerLink="problem">Report Problem</a> -->
+                    </div>
+                </li>
+            </ul>
+
+            <!--  -->
+            <div class="col-md-2 text-white d-md-flex justify-content-around d-none">
+                <i class="fab fa-facebook    "></i>
+                <i class="fab fa-twitter    "></i>
+                <i class="fab fa-instagram    "></i>
+                <i class="fab fa-youtube    "></i>
+            </div>
+        </div>
+    </div>
+</nav>

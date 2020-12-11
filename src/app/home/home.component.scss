@@ -1,0 +1,46 @@
+// @import '../../styles.scss';
+// @import '../mixin';
+// .movie {
+//     border: 5px solid #fff;
+//     @include borderRedius(5px);
+//     .img-overlay {
+//         top: -100;
+//         left: 0;
+//         background-color: $movieColor;
+//         width: 100%;
+//         height: 100%;
+//         transform: scale(.95);
+//         -webkit-transform: scale(.95);
+//         -moz-transform: scale(.95);
+//         -ms-transform: scale(.95);
+//         -o-transform: scale(.95);
+//         transition: all .3s ease-in-out;
+//         @include borderRedius(5px);
+//         @include transition(top, .2s, ease-in-out);
+//     }
+//     .img-caption {
+//         position: relative;
+//         bottom: -120%;
+//         left: 0;
+//         @include transition(bottom, .4s, ease-in-out);
+//     }
+//     .fa-star {
+//         color: $starColor;
+//         font-size: 14px;
+//     }
+// }
+// .movie:hover {
+//     img: {
+//         transform: scale(1.2);
+//         -webkit-transform: scale(1.2);
+//         -moz-transform: scale(1.2);
+//         -ms-transform: scale(1.2);
+//         -o-transform: scale(1.2);
+//     }
+//     .img-overlay {
+//         top: 0;
+//     }
+//     .img-caption {
+//         bottom: 0
+//     }
+// }

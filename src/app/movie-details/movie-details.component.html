@@ -1,0 +1,68 @@
+<div class="container py-5 ">
+    <div class="row justify-content-center align-items-center shadow py-3">
+        <div class="col-md-4 ">
+            <div class="imag position-relative border overflow-hidden">
+                <img class="img-fluid " src="https://image.tmdb.org/t/p/w500/{{dataDetails.poster_path}}" />
+                <div class="layer text-center position-absolute text-white">
+                    <i class="fas fa-eye"></i>
+                    <span class="ml-2">{{dataDetails.popularity}}</span>
+
+                </div>
+                <div class="vote">{{dataDetails.vote_average}}</div>
+            </div>
+        </div>
+        <div class="col-md-7  ">
+            <h3 class="mb-4 text-white"><span class="font-weight-bold"> {{dataDetails.original_title}}</span></h3>
+            <ul class="list-group shadow ">
+                <li class=" list-group-item"><strong>Name: </strong> {{dataDetails.original_title == undefined ? dataDetails.title:dataDetails.original_title }}</li>
+                <li class="list-group-item "><strong>Release: </strong> {{dataDetails.release_date}}</li>
+                <li class="list-group-item "><strong>Status: </strong> {{dataDetails .status}}</li>
+                <li class="list-group-item "><strong>Runtime: </strong> {{dataDetails.runtime}} min.</li>
+                <li class="list-group-item "><strong>Popularity: </strong> {{dataDetails.popularity}}</li>
+                <li class="list-group-item "><strong>Adult: </strong> {{dataDetails.adult}}</li>
+            </ul>
+            <a routerLink="homepage" class="btn btn-lg btn-primary my-4 text-center text-white">Watch Now </a>
+        </div>
+        <div class="col-md-9 mx-auto mt-4 ">
+            <div class="card bg-transparent text-white shadow">
+                <div class="card-body ">
+                    <h4 class="font-weight-bold card-title">Overview</h4>
+                    <p class="card-text text-justify ">{{dataDetails.overview}}</p>
+
+                    <a routerLink="/" class="btn btn-outline-primary my-4 ">Back To Home</a>
+
+                    <a [routerLink]="['/recomendation', dataDetails.id]" class="my-3 btn btn-outline-primary float-right ml-2">
+                         Recomendations Movies <i class="fas fa-arrow-right    "></i></a>
+                         
+                    <a [routerLink]="['/similar', dataDetails.id]" class="my-3 btn btn-outline-info float-right">
+                        similar Movies <i class="fas fa-arrow-right    "></i></a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<!-- <div class="col-md-3 py-3 ">
+            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card " style="width: 18rem; ">
+                <img src="... " class="card-img-top " alt="... ">
+                <div class="card-body ">
+                    <h5 class="card-title ">Card title</h5>
+                    <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="# " class="btn btn-primary ">Go somewhere</a>
+                </div>
+            </div>
+        </div> -->
+
+<!-- <h1 class="display-3 ">Jumbo heading</h1>
+            <p class="lead ">Jumbo helper text</p>
+            <hr class="my-2 ">
+        <p>More info</p>
+        <p class="lead ">
+            <a class="btn btn-primary btn-lg " href="Jumbo action link " role="button ">Jumbo action name</a>
+        </p> -->

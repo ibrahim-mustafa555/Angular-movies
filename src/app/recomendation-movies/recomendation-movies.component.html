@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row my-5">
+
+        <div *ngFor="let movie of dataReco " class="col-lg-3 col-md-4 col-sm-6 my-2 shadow">
+            <a [routerLink]="['/movieDetailes', movie.id]">
+
+                <div class="movie position-relative overflow-hidden">
+                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+
+                    <div class="img-overlay position-absolute d-flex justify-content-center align-items-center ">
+
+                        <div class="img-caption p-3">
+                            <h3 class="font-weight-bold text-white my-3 text-center">{{movie.title == undefined ? movie.name:movie.title}}</h3>
+
+                            <div class="popu">
+                                <i class="fas fa-eye"></i>
+                                <span class="ml-2">{{movie.popularity}}</span>
+                            </div>
+
+                            <!-- <i class="fas fa-star    "></i>
+                        <i class="fas fa-star    "></i>
+                        <i class="fas fa-star    "></i>
+                        <i class="fas fa-star    "></i>
+                        <i class="fas fa-star    "></i> -->
+
+                            <p class="text-justify">Overview:<br> {{movie.overview|seeMore:90}}<a class="text-muted">.... <br/> Read More <i class="fas fa-arrow-circle-right"></i> </a>
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="vote">{{movie.vote_average}}</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+@import '../../styles.scss';
+@import '../mixin';
+nav {
+    background-color: $bgColor !important;
+    border-color: $borderColor;
+    @include boxShadow (0px, 0px, 15px, $shadowColor);
+    .dropdown-menu {
+        background-color: $bgColor !important;
+    }
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        background-color: $bgColor;
+    }
+    // .nav-item {
+    //     border-right: 1px solid #333;
+    // }
+}

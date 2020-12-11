@@ -1,0 +1,34 @@
+<div class="container py-5">
+    <p class="text-white text-center text-justify text-capitalize">Any movie you want to watch it!<br> just write the name bellow and we gonna add it</p>
+
+    <form class="py-4" [formGroup]='contactsForm' (ngSubmit)='saveForm()'>
+        <div class="form-group text-white">
+            <label for="clientName">Client Name:</label>
+            <input type="text" formControlName='clientName' class="form-control" id="clientName">
+            <small class="text-success">Client Name between 2 and 8</small>
+            <div *ngIf='contactsForm.controls.clientName.errors != null && contactsForm.controls.clientName.touched ' class=" bg-danger ">
+                <p class="text-white">Client Not Valid</p>
+            </div>
+        </div>
+
+        <div class="form-group text-white">
+            <label for="clientAge">Client Age:</label>
+            <input type="number" formControlName='clientAge' class="form-control" id="clientAge">
+            <small class="text-success">Client Age between 10 and 80</small>
+            <div *ngIf='contactsForm.controls.clientAge.errors != null && contactsForm.controls.clientAge.touched ' class=" bg-danger ">
+                <p class="text-white">Client Not Valid</p>
+            </div>
+        </div>
+
+        <div class="form-group text-white">
+            <label for="clientMail">Client Mail:</label>
+            <input type="text" formControlName='clientMail' class="form-control" id="clientMail">
+            <small class="text-success">Client Mail required</small>
+            <div *ngIf='contactsForm.controls.clientMail.errors != null && contactsForm.controls.clientMail.touched ' class=" bg-danger ">
+                <p class="text-white">Client Not Valid</p>
+            </div>
+        </div>
+
+        <button [disabled]='!contactsForm.valid' type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>

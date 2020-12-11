@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+
+    <div class="row my-5">
+        <div *ngFor="let movie of LikeMovie | paginate: config; let i = index " class="col-lg-3 col-sm-6 my-2 ">
+            <a [routerLink]="['/movieDetailes', movie.id]" >
+
+                <div class="movie position-relative overflow-hidden">
+                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+
+                    <div class="img-overlay position-absolute d-flex justify-content-center align-items-center p-3">
+
+                        <div class="img-caption ">
+                            <h3 class="font-weight-bold text-white my-3 text-center">{{movie.title == undefined ? movie.original_title:movie.title}}</h3>
+
+
+                            <p class="text-justify">{{movie.overview|seeMore:90}}<a>.... <br/> Read More <i class="fas fa-arrow-circle-right"></i> </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vote">{{movie.vote_average}}</div>
+                </div>
+            </a>
+        </div>  
+    </div>
+
+
+     <!-- Pagination -->
+
+    <div class="m-auto text-center text-white ">
+        <pagination-controls (pageChange)="pageChanged($event)"
+        maxSize="5" 
+        directionLinks="true"
+        autoHide="true" 
+        responsive="true" previousLabel="Previous" 
+        nextLabel="Next"
+        screenReaderPaginationLabel="Pagination" 
+        screenReaderPageLabel="page"
+        screenReaderCurrentLabel="You're on page">
+        </pagination-controls>
+    </div>
+
+</div>
